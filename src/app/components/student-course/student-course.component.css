@@ -1,0 +1,30 @@
+.container {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+  
+  h2, h3 {
+    color: #3f51b5;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  

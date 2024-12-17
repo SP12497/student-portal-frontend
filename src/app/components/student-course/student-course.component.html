@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Student Course Selection</h2>
+  
+    <!-- Dropdown to select students -->
+    <label for="studentSelect">Select Student:</label>
+    <select
+      id="studentSelect"
+      [(ngModel)]="selectedStudentId"
+      (change)="onStudentChange()"
+      class="form-control"
+    >
+      <option value="" disabled>Select a student</option>
+      <option *ngFor="let student of students" [value]="student.id">
+        {{ student.name }}
+      </option>
+    </select>
+  
+    <!-- Display courses -->
+    <div *ngIf="courses.length > 0; else noCourses">
+      <h3>Enrolled Courses:</h3>
+      <ul>
+        <li *ngFor="let course of courses">
+            {{ course.title }}
+        </li>
+      </ul>
+    </div>
+  
+    <ng-template #noCourses>
+      <p>No courses enrolled for the selected student.</p>
+    </ng-template>
+  </div>
+  
